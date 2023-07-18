@@ -1,0 +1,53 @@
+.Shopping_scroll {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 428px;
+  height: 100%;
+
+  background: #18181B;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 72px;
+  
+  border-bottom: 1px solid #3F3F46;
+  background: #18181B;
+}
+
+.itens {
+  color: aqua;
+}
+
+header p {
+  color: #F9FAFB;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+header button {
+  height: 24px;
+  width: 24px;
+  
+  margin: 0 0 0 12rem;
+  background-color: aqua;
+  outline: none;
+  border: none;
+}
+
+.ProdutosADC {
+  height: 100vh;
+  background-color: #0000ff;
+}
+
+.Price {
+  background-color: aliceblue;
+  height: 224px;
+}
