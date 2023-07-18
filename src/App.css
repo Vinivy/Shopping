@@ -1,7 +1,5 @@
 .App {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+
 
   width: 100vw;
   height: 100vh;
@@ -20,13 +18,14 @@ main {
   color: #ffff;
   grid-template-columns: max-content max-content max-content;
   grid-template-rows: max-content ;
-  gap: 50px;
+  gap: 20px;
 }
 
 main div img {
   height: 170px;
   width: 170px;
   border-radius: 10px;
+  color: #A855F7;
 }
 
 section{
@@ -35,11 +34,25 @@ section{
   justify-content: center;
   flex-direction: column;
 
-  width: 200px;
-  height: 300px;
+  width: 220px;
+  height: 20rem;
 
   border-radius: 20px;
   background-color: #3F3F46;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.ValorCadeira button img,.ValorHeadset button img, .ValorMonitor button img, .ValorTeclado button img, .ValorMouse button img, .ValorGabinete  button img {
+  width: 35px;
+  height: 30px;
 }
 
 .product {
@@ -50,13 +63,11 @@ section{
 
   width: 170px;
   height: fit-content;
-
-  
 }
 
 .ValorCadeira , .ValorHeadset, .ValorMonitor, .ValorTeclado, .ValorMouse, .ValorGabinete {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   width: 170px;
 }

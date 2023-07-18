@@ -7,6 +7,8 @@ import Teclado from './Assets/Teclado.jpg'
 import Mouse from './Assets/Mouse.jpg'
 import Gabinete from './Assets/Gabinete.jpg'
 //
+//SVGS
+import Car from './icons/Add-car.svg'
 //import da barra de compras
 import Products from './Compras/Products'
 function App() {
@@ -16,10 +18,10 @@ function App() {
       <section>
         <div className='product'>
           <img src={Cadeira} alt="" />
-          <p>Cadeira Gamer  RGB - Preta com Iluminação (Led)</p>
+          <p>Cadeira Gamer  RGB (Led)</p>
           <div className='ValorCadeira'>
            <span>R$ 8.599,90</span> 
-           <button></button>
+           <button><img src={Car} alt="" /></button>
           </div>
         </div>
       </section>  
@@ -30,17 +32,17 @@ function App() {
         </div>
         <div className='ValorHeadset'>
            <span className='Headset'>R$ 8.599</span> 
-           <button></button>
+           <button><img src={Car} alt="" /></button>
         </div>
       </section>  
       <section>
         <div className='product'>
           <img src={Monitor} alt="" />
           <div>
-           <p>Monitor Gamer Curvo 49 DQHD, 240Hz, 1ms, HDMI</p>
+           <p>Monitor Gamer Curvo 49 DQHD</p>
             <div className='ValorMonitor'>
              <span>R$ 8.599</span> 
-             <button></button>
+             <button><img src={Car} alt="" /></button>
             </div>
           </div>
         </div>
@@ -49,10 +51,10 @@ function App() {
         <div className='product'>
           <img src={Teclado} alt="" />
           <div>
-           <p>Teclado Gamer Mecânico Low Profile RGB AW510K 580</p>
+           <p>Teclado Gamer Mecânico</p>
             <div className='ValorTeclado'>
              <span>R$ 8.599</span> 
-             <button></button>
+             <button><img src={Car} alt="" /></button>
             </div>
           </div>
         </div>
@@ -64,7 +66,7 @@ function App() {
            <p>Mouse Gamer RGB preto</p>
            <div className='ValorMouse'>
            <span>R$ 8.599</span> 
-           <button></button>
+           <button><img src={Car} alt="" /></button>
            </div>
           </div>
         </div>
@@ -76,13 +78,15 @@ function App() {
            <p>Gabinete RGB Preto </p>
             <div className='ValorGabinete'>
              <span>R$ 8.599</span> 
-             <button></button>
+             <button><img src={Car} alt="" /></button>
             </div>
           </div>
         </div>
       </section>
     </main>
-      <Products/>
+    <>
+     <Products/>
+    </>
    </div>
     
   )
