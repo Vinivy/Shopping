@@ -10,7 +10,7 @@ import Gabinete from './Assets/Gabinete.jpg'
 //SVGS
 import Car from './icons/Add-car.svg'
 //import da barra de compras
-import Products from './Compras/Products'
+import Products from './Compras/Products.jsx'
 function App() {
   return (
   <div className="App">
@@ -21,7 +21,7 @@ function App() {
           <p>Cadeira Gamer  RGB (Led)</p>
           <div className='ValorCadeira'>
            <span>R$ 8.599,90</span> 
-           <button><img src={Car} alt="" /></button>
+           <button ><img src={Car} alt="" /></button>
           </div>
         </div>
       </section>  

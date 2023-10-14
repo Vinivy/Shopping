@@ -1,0 +1,68 @@
+.Cadeira {
+  display: flex;
+  color: white;
+  gap: 7%;
+  align-items: center;
+
+  width: 90%;
+  height: 13vh;
+}
+
+.Cadeira img {
+  height: 13vh;
+  border-radius: 8px;
+}
+
+.info {
+  height: fit-content;
+}
+
+.info h3 {
+  margin: 0;
+  color: #E4E4E7;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+
+.Valores {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Valores p {
+  margin: 0;
+  color: #E4E4E7;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px; /* 125% */
+}
+
+.Adds {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.Adds button:nth-child(1) {
+  height: 34px;
+  width: 35px;
+  border-radius: 8px;
+  border: 1.5px solid var(--stroke-color, #3F3F46);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.Adds button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 34px;
+  width: 35px;
+  border-radius: 8px;
+  border: 1.5px solid var(--brand-color-light, #A855F7);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.10);
+}

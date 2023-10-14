@@ -3,6 +3,9 @@ import Style from './Products.module.css'
 //SVG´s
 import Close from '../icons/Close.svg'
 import Ticket from '../icons/Tag.svg'
+
+//ADDS das compras
+import CadeiraGame from "../Cadeira/CadeiraGame"
 function Produtcs() {
   return(
     <div className={Style.Shopping_scroll}>
@@ -10,6 +13,8 @@ function Produtcs() {
         <p>Seu carrinho tem <span className={Style.itens}>0</span></p> <button><img src={Close} alt="" /></button>
       </header>
       <div className={Style.ProdutosADC}>
+        <CadeiraGame/>
+        
       </div>
       <div className={Style.Price}>
         <div className={Style.Checket}>
