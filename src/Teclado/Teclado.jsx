@@ -1,14 +1,12 @@
-import Style from "./Cadeira.module.css"
-//Img
-import ImgCadeira from '../Assets/Cadeira.jpg'
-//botões
-function CadeiraGame(){
+import Style from "./Teclado.module.css"
+import ImgTeclado from "../Assets/Teclado.jpg"
 
-  return (
-    <div className={Style.Cadeira}>
-      <img src={ImgCadeira} alt="" />
+function Teclado() {
+  return(
+    <div className={Style.Teclado}>
+      <img src={ImgTeclado} alt="" />
       <div className={Style.info}>
-        <h3>Cadeira Gamer  RGB - Preta com Iluminação (Led)</h3>
+        <h3>Teclado Gamer Mecânico</h3>
         <div className={Style.Valores}>
           <p>R$ 959,90</p>
           <div className={Style.Adds}>
@@ -27,8 +25,7 @@ function CadeiraGame(){
         </div>
       </div>
     </div>
-    
   )
 }
 
-export default CadeiraGame
+export default Teclado

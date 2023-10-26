@@ -1,92 +1,170 @@
 import './App.css'
 //Imgs dos Produtos
-import Cadeira from './Assets/Cadeira.jpg'
-import Headset from './Assets/Headset.jpg'
-import Monitor from './Assets/Monitor.jpg'
-import Teclado from './Assets/Teclado.jpg'
-import Mouse from './Assets/Mouse.jpg'
-import Gabinete from './Assets/Gabinete.jpg'
+import ImgCadeira from './Assets/Cadeira.jpg'
+import ImgHeadset from './Assets/Headset.jpg'
+import ImgMonitor from './Assets/Monitor.jpg'
+import ImgTeclado from './Assets/Teclado.jpg'
+import ImgMouse from './Assets/Mouse.jpg'
+import ImgGabinete from './Assets/Gabinete.jpg'
 //
 //SVGS
 import Car from './icons/Add-car.svg'
 //import da barra de compras
 import Products from './Compras/Products.jsx'
+
+import { useState } from "react"
+//Componetes de add
+import CadeiraGame from './Cadeira/CadeiraGame'
+//
+import FoneHeadset from './Headset/FoneHeadset'
+//
+import Monitor from './Monitor/Monitor'
+//
+import Mouse from './Mouse/Mouse'
+//
+import Teclado from './Teclado/Teclado'
+//
+import Gabinete from './Gabinete/Gabinete'
+
+
 function App() {
+  const [itens, setItens] = useState([]);
+  const [Fone , setFone] = useState([])
+  const [Tela, setTela] = useState([])
+  const [Teclas, setTeclas] = useState([])
+  const [Rato, setRato] = useState([])
+  const [Gabi, setGabi] = useState([])
+
+  //Cadeira add
+  const Cadeira = () => {
+    return <CadeiraGame/>
+  }
+
+  const adicionarCadeira = () => {
+    //esse previtens é para pode coloca maiss de um
+    setItens(prevItens => [...prevItens, Cadeira])
+  }
+
+  //Gabinete
+  const Gabin = () => {
+    return <Gabinete/>
+  }
+
+  const addGabinete = () => {
+    setGabi([Gabin])
+  }
+  //Fone add
+  const headSet = () => {
+    return <FoneHeadset/>
+  }
+
+  const addHeadset = () => {
+    setFone([headSet])
+  }
+  
+  //Monitor
+  const Monite = () => {
+    return <Monitor/>
+  }
+
+  const addMonitor = () => {
+    setTela([Monite])
+  }
+
+  //Mouse
+  const mouse = () => {
+    return <Mouse/>
+  }
+
+  const addMouse = () => {
+    setRato([mouse])
+  }
+
+  //Teclado 
+  const Teclad = () => {
+    return <Teclado/>
+  }
+  const addTeclado = () => {
+    setTeclas([Teclad])
+  }
+
   return (
   <div className="App">
     <main>
       <section>
         <div className='product'>
-          <img src={Cadeira} alt="" />
+          <img src={ImgCadeira} alt="" />
           <p>Cadeira Gamer  RGB (Led)</p>
           <div className='ValorCadeira'>
            <span>R$ 8.599,90</span> 
-           <button ><img src={Car} alt="" /></button>
+           <button onClick={adicionarCadeira}><img src={Car} alt="" /></button>
           </div>
         </div>
       </section>  
       <section>
         <div className='product'>
-          <img src={Headset} alt="" />
+          <img src={ImgHeadset} alt="" />
           <p>Headset Gamer RGB Preto</p>
         </div>
         <div className='ValorHeadset'>
            <span className='Headset'>R$ 8.599</span> 
-           <button><img src={Car} alt="" /></button>
+           <button onClick={addHeadset}><img src={Car} alt="" /></button>
         </div>
       </section>  
       <section>
         <div className='product'>
-          <img src={Monitor} alt="" />
+          <img src={ImgMonitor} alt="" />
           <div>
            <p>Monitor Gamer Curvo 49 DQHD</p>
             <div className='ValorMonitor'>
              <span>R$ 8.599</span> 
-             <button><img src={Car} alt="" /></button>
+             <button onClick={addMonitor} ><img src={Car} alt="" /></button>
             </div>
           </div>
         </div>
       </section>
       <section>
         <div className='product'>
-          <img src={Teclado} alt="" />
+          <img src={ImgTeclado} alt="" />
           <div>
            <p>Teclado Gamer Mecânico</p>
             <div className='ValorTeclado'>
              <span>R$ 8.599</span> 
-             <button><img src={Car} alt="" /></button>
+             <button onClick={addTeclado} ><img src={Car} alt="" /></button>
             </div>
           </div>
         </div>
       </section>
       <section>
         <div className='product'>
-          <img src={Mouse} alt="" />
+          <img src={ImgMouse} alt="" />
           <div>
            <p>Mouse Gamer RGB preto</p>
            <div className='ValorMouse'>
            <span>R$ 8.599</span> 
-           <button><img src={Car} alt="" /></button>
+           <button onClick={addMouse} ><img src={Car} alt="" /></button>
            </div>
+
           </div>
         </div>
       </section>
       <section>
         <div className='product'>
-          <img src={Gabinete} alt="" />
+          <img src={ImgGabinete} alt="" />
           <div>
            <p>Gabinete RGB Preto </p>
             <div className='ValorGabinete'>
              <span>R$ 8.599</span> 
-             <button><img src={Car} alt="" /></button>
+             <button onClick={addGabinete} ><img src={Car} alt="" /></button>
             </div>
           </div>
         </div>
       </section>
+    
+    <Products itens={itens} Gabe={Gabi} Head={Fone} Monit={Tela} Rat={Rato} Tecla={Teclas}/>
+
+      
     </main>
-    <>
-     <Products/>
-    </>
    </div>
     
   )

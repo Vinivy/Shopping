@@ -1,14 +1,11 @@
-import Style from "./Cadeira.module.css"
-//Img
-import ImgCadeira from '../Assets/Cadeira.jpg'
-//botões
-function CadeiraGame(){
-
+import Style from "./Monitor.module.css"
+import ImgMonitor from "../Assets/Monitor.jpg"
+function Monitor() {
   return (
-    <div className={Style.Cadeira}>
-      <img src={ImgCadeira} alt="" />
+    <div className={Style.Monitor}>
+      <img src={ImgMonitor} alt="" />
       <div className={Style.info}>
-        <h3>Cadeira Gamer  RGB - Preta com Iluminação (Led)</h3>
+        <h3>Monitor Gamer Curvo 49 DQHD</h3>
         <div className={Style.Valores}>
           <p>R$ 959,90</p>
           <div className={Style.Adds}>
@@ -27,8 +24,6 @@ function CadeiraGame(){
         </div>
       </div>
     </div>
-    
   )
 }
-
-export default CadeiraGame
+export default Monitor

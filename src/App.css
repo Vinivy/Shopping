@@ -1,28 +1,32 @@
 .App {
   display: grid;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: 100%;
   grid-template-rows: 100vh;
 
   align-items: center;
-  justify-items: end;
+  justify-items: center;
 
   background: #09090B;
-  height: 100vh;
   
   border: 0;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  justify-content: space-around;
+  
 }
 
 main {
   display: grid;
+  justify-content: flex-start;
+  align-items: center;
+  grid-template-columns: repeat(3, minmax(17%, 20%));
+  grid-template-rows: minmax(10%, 50%);
+
   color: #ffff;
-  grid-template-columns: repeat(3, auto);
-  grid-auto-rows: max-content;
-  gap: 20px;
-  height: fit-content;
+  gap: 10px;
+    
+  width: 100vw;
+  height: 100vh;
 }
 
 main div img {
@@ -32,17 +36,17 @@ main div img {
   color: #A855F7;
 }
 
-section{
-  display: flex;
+section {
+  display: grid;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-
-  width: 220px;
-  height: 20rem;
 
   border-radius: 20px;
   background-color:   #3F3F46;
+}
+
+section div p {
+  margin: 0;
 }
 
 button {
@@ -65,8 +69,13 @@ button {
   align-items: center;
   flex-direction: column;
 
-  width: 170px;
+  width: min-content;
   height: fit-content;
+}
+
+.product img {
+  height: 115px; 
+  width: 136px;
 }
 
 .ValorCadeira , .ValorHeadset, .ValorMonitor, .ValorTeclado, .ValorMouse, .ValorGabinete {
@@ -76,3 +85,16 @@ button {
   width: 170px;
 }
 
+.CartShopping {
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.CartShopping img {
+  height: 50px;
+  width: 40px;
+}
