@@ -1,0 +1,11 @@
+.Conclusion {
+  display: grid;
+  justify-items: center;
+  position: fixed;
+  top: 9rem;
+  right: 15rem;
+
+
+  padding: 2rem 0 2rem 0;
+  height: fit-content;
+}

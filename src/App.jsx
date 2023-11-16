@@ -28,7 +28,7 @@ import Gabinete from './Gabinete/Gabinete'
 
 
 function App() {
-  const [itens, setItens] = useState([]);
+  const [cadeira, setcadeira] = useState([]);
   const [Fone , setFone] = useState([])
   const [Tela, setTela] = useState([])
   const [Teclas, setTeclas] = useState([])
@@ -42,7 +42,7 @@ function App() {
 
   const adicionarCadeira = () => {
     //esse previtens é para pode coloca maiss de um
-    setItens(prevItens => [...prevItens, Cadeira])
+    setcadeira( /*prevItens =>*/ [/*...prevItens ,*/ Cadeira])
   }
 
   //Gabinete
@@ -161,7 +161,7 @@ function App() {
         </div>
       </section>
     
-    <Products itens={itens} Gabe={Gabi} Head={Fone} Monit={Tela} Rat={Rato} Tecla={Teclas}/>
+    <Products Cade={cadeira} Gabe={Gabi} Head={Fone} Monit={Tela} Rat={Rato} Tecla={Teclas}/>
 
       
     </main>

@@ -4,11 +4,15 @@ import Style from './Products.module.css'
 import Close from '../icons/Close.svg'
 import Carrinho from '../icons/Add-car.svg'
 import Ticket from '../icons/Tag.svg'
+//componente
+import Conclusion from '../ConfirCompras/Confirm'
 
 import { useState } from "react";
-function Produtcs({itens, Gabe, Head, Monit, Rat, Tecla }) {
+function Produtcs({Cade, Gabe, Head, Monit, Rat, Tecla }) {
   const [visible, setVisible] = useState(false)
 
+  const [Aparicion, setAparicion] = useState(false)
+  
   return(
     <div>
       <button className={Style.ButtonPrincipal} onClick={() => setVisible(!visible)}>
@@ -23,7 +27,7 @@ function Produtcs({itens, Gabe, Head, Monit, Rat, Tecla }) {
             </header>
             <div className={Style.ProdutosADC}>
               {
-                itens.map((Item, index) => <Item key={index} />)}
+                Cade.map((Cadeira, index) => <Cadeira key={index} />)}
               {
                 Gabe.map((Gabinete, index) => <Gabinete key={index}/>)}
               {
@@ -45,7 +49,13 @@ function Produtcs({itens, Gabe, Head, Monit, Rat, Tecla }) {
                 </div>
               </div>
               <div className={Style.Finalizar}>
-                <button>Finalizar Compra</button>
+                
+                <button onClick={() => setAparicion(!Aparicion)}>Finalizar Compra</button>
+                {
+                  Aparicion && (
+                    <Conclusion/>
+                  )
+                }
               </div>
             </div>
           </div>
